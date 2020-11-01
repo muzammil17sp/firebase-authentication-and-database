@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@500&display=swap" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js"></script>
+
+    <style>
+        body{
+            margin: 0%;
+            padding: 0px;
+            font-family: 'Cabin', sans-serif;
+            background-image: url("https://png.pngtree.com/thumb_back/fh260/back_our/20190628/ourmid/pngtree-blue-background-with-geometric-forms-image_280879.jpg");
+            background-repeat: no-repeat;
+            background-size: 100vw 100vh;
+        }
+        .box{
+            width: 300px;
+            padding: 40px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background: rgba(0,0,0,0.8);
+            text-align: center;
+        }
+        .box h1,h4{
+            font-weight: 500;
+            color: #fff;
+            text-transform: uppercase;
+        }
+        .box input[type="email"],[type=password]{
+            border:none;
+            background: none;
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            border: 2px solid #3498db;
+            padding: 14px 10px;
+            width: 200px;
+            outline: none;
+            color: #fff;
+            border-radius: 24px;
+            transition: 0.25s;
+
+        }
+        .box input[type="email"]:focus,input[type=password]:focus{
+            width: 280px;
+            border-color: #2ecc71;
+
+        }
+        .box input[type="submit"]{
+            border:none;
+            background: none;
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            border: 2px solid #2ecc71;
+            padding: 14px 40px;
+            outline: none;
+            color: #fff;
+            border-radius: 24px;
+            transition: 0.25s;
+            cursor: pointer;
+        }
+        .box input[type="submit"]:hover{
+            background-color: #2ecc71;
+        }
+        button{
+            border:none;
+            background: none;
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            border: 2px solid #2ecc71;
+            padding: 14px 40px;
+            outline: none;
+            color: #fff;
+            border-radius: 24px;
+            transition: 0.25s;
+            cursor: pointer;
+        }
+        button a{
+            text-decoration: none;
+            color: #fff;
+        }
+        button:hover{
+            background-color: #2ecc71;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>Login</h1>
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Password">
+        <input  onclick="login()" type="submit" value="Login">
+        <h4>If You Are A New User Then Signup</h4>
+  <button > <a href="signup.html" target="_blank">Signup</a></button>
+  <!-- <button onclick="data()">get Data</button> -->
+  </div>
+  <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+      apiKey: "AIzaSyCyYb7kwuhzBuH3gV3ot8x8k7LLbFhcPMw",
+      authDomain: "authentication-8fbf4.firebaseapp.com",
+      databaseURL: "https://authentication-8fbf4.firebaseio.com",
+      projectId: "authentication-8fbf4",
+      storageBucket: "authentication-8fbf4.appspot.com",
+      messagingSenderId: "316250886622",
+      appId: "1:316250886622:web:8317d81fbf311567298d4f",
+      measurementId: "G-87QKP11RE9"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+  <script src="app.js"></script>
+</body>
+</html>
